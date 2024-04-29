@@ -1,0 +1,55 @@
+:root {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-weight: normal;
+    margin: 0;
+    position: relative;
+}
+
+html, body {
+    background: $--color-background;
+    color: $--color-text;
+    font-family: 'Poppins', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    height: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+#app {
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+img {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+.disableScroll {
+    overflow: hidden;
+}

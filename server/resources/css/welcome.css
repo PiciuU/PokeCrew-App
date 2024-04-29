@@ -1,0 +1,223 @@
+:root {
+    font-size: 62.5%;
+
+    --color-background: #121212;
+    --color-text: #ffffff;
+
+    --color-primary: #2cbb2c;
+    --color-hint: #f9322c;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-weight: normal;
+    margin: 0;
+    position: relative;
+}
+
+html, body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Poppins', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+}
+
+.header__content {
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    height: 100%;
+}
+
+.header__content::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 1px solid gray;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__logo svg {
+    width: 48px;
+    height: 48px;
+}
+
+.header__logo span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.main__content {
+    max-width:1600px;
+    flex: 1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding: 20px 20px;
+}
+
+.main__content h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 35px;
+    position: relative;
+    text-align: center;
+}
+
+.main__content h1::after {
+    content: 'Dreamfork';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-size: clamp(3rem, 16rem, 15vw);
+    font-weight: bold;
+    opacity: .05;
+    color: var(--color-primary);
+    z-index: -1;
+}
+
+.main__content h2 {
+    font-size: 2rem;
+    max-width: 80rem;
+    text-align: center;
+}
+
+.main__content h2 a {
+    text-decoration: none;
+    color: var(--color-hint);
+}
+
+.main__btn {
+    text-transform: uppercase;
+    background: none;
+    color: var(--color-text);
+    border: 1px solid var(--color-primary);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 35px;
+    transition: all .5s ease-in-out;
+    text-decoration: none;
+}
+
+.main__btn:hover {
+    background: var(--color-primary);
+    color: var(--color-background);
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer__content {
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 20px;
+}
+
+.footer__content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__content::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 1px solid gray;
+}
+
+.footer__feature {
+    display: flex;
+    gap: 20px;
+}
+
+.feature__icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature__title {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        height: 110px;
+    }
+
+    .header__content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footer__content a {
+        width: 100%;
+        max-width: 350px;
+    }
+}

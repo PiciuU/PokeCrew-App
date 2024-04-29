@@ -1,0 +1,33 @@
+{
+    "name": "piciuu/dreamfork-php-framework",
+	"description": "DreamFork - A PHP framework for personal usage",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PiciuU",
+            "email": "piciuubest@gmail.com"
+        }
+    ],
+	"autoload": {
+        "files": [
+            "framework/Support/helpers.php",
+            "framework/Support/Collections/helpers.php"
+        ],
+		"psr-4": {
+            "Framework\\": "framework/",
+			"App\\": "app/"
+		}
+	},
+    "require": {
+        "php": "^8.1",
+        "symfony/http-foundation": "^6.3",
+        "vlucas/phpdotenv": "^5.5",
+        "nesbot/carbon": "^2.69",
+        "symfony/routing": "^6.3",
+        "symfony/finder": "^6.3",
+        "symfony/filesystem": "^6.3"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.3"
+    }
+}

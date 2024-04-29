@@ -1,0 +1,7 @@
+<?php
+
+require_once 'vendor/autoload.php';
+
+$kernel = new Framework\Console\Kernel(array_slice($argv, 1));
+
+$kernel->run();
