@@ -8,13 +8,6 @@ Welcome to the PokeCrew website, your go-to hub for all things PokeCrew! If you'
 
 A live version of the application is available at: [https://pokecrew.dream-speak.pl](https://pokecrew.dream-speak.pl/)
 
-## Features
-
-- Add products to your watchlist.
-- Receive notifications when a product becomes available.
-- Edit parameters such as the maximum price for which you want to receive notifications.
-- Remove products that no longer interest you.
-
 ## Technologies
 
 - Vue 3 - a modern JavaScript framework for building user interfaces.
