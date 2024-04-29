@@ -1,0 +1,17 @@
+{
+    "home": {
+        "upload-message-start": "Upload your photos with",
+        "upload-message-end": "here...",
+        "tag-message": "... or just simply tag us on"
+    },
+    "uploader": {
+        "status-uploading": "photo(s)",
+        "status-fail": "Failed",
+        "status-success": "Success",
+        "message-uploading": "Uploading...",
+        "message-fail": "Uh-oh! Upload didn't make it...",
+        "message-success": "Hooray! Thanks for your upload!",
+        "action-cancel": "Cancel",
+        "action-close": "Close"
+    }
+}

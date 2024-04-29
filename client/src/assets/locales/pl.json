@@ -1,0 +1,17 @@
+{
+    "home": {
+        "upload-message-start": "Prześlij swoje zdjęcia z",
+        "upload-message-end": "tutaj...",
+        "tag-message": "... lub po prostu oznacz nas na"
+    },
+    "uploader": {
+        "status-uploading": "plik(i)",
+        "status-fail": "Niepowodzenie",
+        "status-success": "Sukces",
+        "message-uploading": "Przesyłanie...",
+        "message-fail": "Ups! Przesyłanie nie powiodło się...",
+        "message-success": "Hurra! Dziękujemy za przesłanie!",
+        "action-cancel": "Anuluj",
+        "action-close": "Zamknij"
+    }
+}

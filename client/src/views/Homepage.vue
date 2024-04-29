@@ -15,14 +15,14 @@
 
             <div class="content">
                 <p class="content__text content__text--left">
-                    Upload your photos with <span>@PokeCrew</span> here...
+                    {{ $t("home.upload-message-start") }} <span>@PokeCrew</span> {{ $t("home.upload-message-end")}}
                 </p>
                 <div class="content__uploader">
                     <img src="@/assets/images/pokeball.png" alt="Pokeball upload button" @click="uploadInputRef.click()" />
                     <input ref="uploadInputRef" @change="uploadImage" type="file" accept=".png, .avif, .gif, .jpg, .jpeg, .webp, .heic" multiple hidden>
                 </div>
                 <p class="content__text content__text--right">
-                    ... or just simply tag us on <a href="https://www.instagram.com/poke.crewpl" aria-label="Instagram" target="_blank">Instagram</a>
+                    {{ $t("home.tag-message") }} <a href="https://www.instagram.com/poke.crewpl" aria-label="Instagram" target="_blank">Instagram</a>
                 </p>
             </div>
 

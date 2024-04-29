@@ -9,21 +9,21 @@
                 'card__uploader--success': uploader.status == UPLOADER_STATUS.Success
             }">
                 <div class="uploader__header">
-                    <p v-if="uploader.status == UPLOADER_STATUS.Uploading"> {{ uploader.filesAmount == 1 ? '1 photo' : uploader.filesAmount + ' photos' }}</p>
-                    <p v-else-if="uploader.status == UPLOADER_STATUS.Fail">Failed</p>
-                    <p v-else-if="uploader.status == UPLOADER_STATUS.Success">Success</p>
+                    <p v-if="uploader.status == UPLOADER_STATUS.Uploading"> {{ uploader.filesAmount }} {{ $t("uploader.status-uploading") }}</p>
+                    <p v-else-if="uploader.status == UPLOADER_STATUS.Fail">{{ $t("uploader.status-fail") }}</p>
+                    <p v-else-if="uploader.status == UPLOADER_STATUS.Success">{{ $t("uploader.status-success") }}</p>
                 </div>
                 <div class="uploader__body">
-                    <p v-if="uploader.status == UPLOADER_STATUS.Uploading">Uploading...</p>
-                    <p v-else-if="uploader.status == UPLOADER_STATUS.Fail">Uh-oh! Upload didn't make it...</p>
-                    <p v-else-if="uploader.status == UPLOADER_STATUS.Success">Hooray! Thank you for your upload!</p>
+                    <p v-if="uploader.status == UPLOADER_STATUS.Uploading">{{ $t("uploader.message-uploading") }}</p>
+                    <p v-else-if="uploader.status == UPLOADER_STATUS.Fail">{{ $t("uploader.message-fail") }}</p>
+                    <p v-else-if="uploader.status == UPLOADER_STATUS.Success">{{ $t("uploader.message-success") }}</p>
                 </div>
                 <div class="uploader__footer">
                     <div class="progress-bar">
                         <div class="fill" ref="progressBarFillRef"></div>
                     </div>
                     <button @click="closeModal">
-                        {{ uploader.status === UPLOADER_STATUS.Uploading ? 'Cancel' : 'Close' }}
+                        {{ uploader.status === UPLOADER_STATUS.Uploading ? $t("uploader.action-cancel") : $t("uploader.action-close") }}
                     </button>
                 </div>
             </div>
