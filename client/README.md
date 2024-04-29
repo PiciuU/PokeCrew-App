@@ -1,10 +1,14 @@
-# client
+# PokeCrew Application
 
-This template should help get you started developing with Vue 3 in Vite.
+PokeCrew website utilizes Vue as a Single Page Application (SPA) for its frontend, communicating seamlessly with the API. Configuration options in the frontend include:
 
-## Recommended IDE Setup
+### Configuration
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Apart from the default settings, the following additional configurations are defined in `env.development` and `env.production` files:
+
+- **VITE_APP_API_URL**: The address where the API is accessible.
+
+If you encounter issues with CORS during development, it is recommended to use the [Allow CORS: Access-Control-Allow-Origin](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) browser extension.
 
 ## Customize configuration
 
