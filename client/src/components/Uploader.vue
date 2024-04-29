@@ -136,6 +136,7 @@
         animation: scale .25s ease-in 0s 1;
         display: flex;
         justify-content: center;
+        max-width: 80vh;
         position: relative;
 
         &__image {
