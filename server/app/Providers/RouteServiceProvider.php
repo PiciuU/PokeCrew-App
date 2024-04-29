@@ -51,5 +51,21 @@ class RouteServiceProvider extends ServiceProvider
     public function __construct() {
         // Call the parent class constructor, passing the available interfaces configuration.
         parent::__construct($this->availableInterfaces);
+
+        $this->handleCORS();
+    }
+
+    private function handleCORS()
+    {
+        if (config('app.env') == 'production') return;
+
+        if (request()->isMethod('OPTIONS')) {
+            $response = response('', 204, [
+                'Access-Control-Allow-Origin' => '*',
+                'Access-Control-Allow-Methods' => 'POST, GET, DELETE, PUT, PATCH, OPTIONS',
+            ]);
+
+            $response->send();
+        }
     }
 }
