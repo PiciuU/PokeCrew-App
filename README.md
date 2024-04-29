@@ -2,7 +2,7 @@
 
 # PokeCrew Official Website
 
-Stay ahead of the game by adding your desired products to the watchlist. Be the first to know when they become available or go on sale. Gain an advantage over other shoppers and never miss out on your dream purchases!
+Welcome to the PokeCrew website, your go-to hub for all things PokeCrew! If you've had the pleasure of meeting us in your city, we'd love for you to swing by our site and share your cherished moments with us through photos. Let's create unforgettable memories together!
 
 ## Live
 
