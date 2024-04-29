@@ -41,6 +41,13 @@ class UploadController extends Controller
 
     public function upload($request)
     {
+        if (empty($request->files->all())) {
+            return response()->json([
+                'status' => "Success",
+                'message' => "File upload completed successfully."
+            ], 200);
+        }
+
         $hasErrorOccured = false;
 
         foreach($request->files->all()['images'] as $file) {
