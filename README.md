@@ -1,4 +1,4 @@
-<p align="center"><a href="https://pokecrew.dream-speak.pl/" target="_blank"><img src="https://raw.githubusercontent.com/PiciuU/PokeCrew-Official-Website/master/client/src/assets/images/logo.svg" width="300" alt="PokeCrew Logo"></a></p>
+<p align="center"><a href="https://pokecrew.pl/" target="_blank"><img src="https://raw.githubusercontent.com/PiciuU/PokeCrew-Official-Website/master/client/src/assets/images/logo.svg" width="300" alt="PokeCrew Logo"></a></p>
 
 # PokeCrew Official Website
 
@@ -6,7 +6,7 @@ Welcome to the PokeCrew website, your go-to hub for all things PokeCrew! If you'
 
 ## Live
 
-A live version of the application is available at: [https://pokecrew.dream-speak.pl](https://pokecrew.dream-speak.pl/)
+A live version of the application is available at: [https://pokecrew.pl](https://pokecrew.pl/)
 
 ## Technologies
 
