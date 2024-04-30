@@ -22,12 +22,12 @@
                     <input ref="uploadInputRef" @change="uploadImage" type="file" accept=".png, .avif, .gif, .jpg, .jpeg, .webp, .heic" multiple hidden>
                 </div>
                 <p class="content__text content__text--right">
-                    {{ $t("home.tag-message") }} <a href="https://www.instagram.com/poke.crewpl" aria-label="Instagram" target="_blank">Instagram</a>
+                    {{ $t("home.tag-message") }} <a href="https://www.instagram.com/pokecrewpl" aria-label="Instagram" target="_blank">Instagram</a>
                 </p>
             </div>
 
             <div class="instagram-qr-code">
-                <a href="https://www.instagram.com/poke.crewpl" aria-label="Instagram" target="_blank">
+                <a href="https://www.instagram.com/pokecrewpl" aria-label="Instagram" target="_blank">
                     <img src="@/assets/images/instagram-qrcode.png" alt="Instagram QR Code"/>
                 </a>
             </div>
