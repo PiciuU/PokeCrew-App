@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-ssr": "vite-ssg build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
@@ -25,6 +26,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.75.0",
     "sass-loader": "^14.2.1",
-    "vite": "^5.2.8"
+    "vite": "^5.2.8",
+    "vite-ssg": "^0.23.7"
   }
 }
