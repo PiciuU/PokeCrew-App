@@ -4,13 +4,13 @@
 
         <div class="wrapper">
             <div class="nav">
-                <img class="nav__logo" src="@/assets/images/logo.svg" alt="PokeCrew logo" />
+                <img class="nav__logo" width="304" height="73" src="@/assets/images/logo.svg" alt="PokeCrew logo" />
             </div>
 
             <div class="gallery">
-                <img class="gallery__image gallery__image--left" src="@/assets/images/gallery/01.jpg" alt="PokeCrew group in the picture" />
-                <img class="gallery__image gallery__image--mid" src="@/assets/images/gallery/02.jpg" alt="PokeCrew group in the picture" />
-                <img class="gallery__image gallery__image--right" src="@/assets/images/gallery/03.jpg" alt="PokeCrew group in the picture" />
+                <img class="gallery__image gallery__image--left" width="346" height="216" src="@/assets/images/gallery/01.jpg" alt="PokeCrew group in the picture" />
+                <img class="gallery__image gallery__image--mid" width="504" height="315" src="@/assets/images/gallery/02.jpg" alt="PokeCrew group in the picture" />
+                <img class="gallery__image gallery__image--right" width="346" height="216" src="@/assets/images/gallery/03.jpg" alt="PokeCrew group in the picture" />
             </div>
 
             <div class="content">
@@ -28,7 +28,7 @@
 
             <div class="instagram-qr-code">
                 <a href="https://www.instagram.com/pokecrewpl" aria-label="Instagram" target="_blank">
-                    <img src="@/assets/images/instagram-qrcode.png" alt="Instagram QR Code"/>
+                    <img width="190" height="227" src="@/assets/images/instagram-qrcode.png" alt="Instagram QR Code"/>
                 </a>
             </div>
         </div>
@@ -85,10 +85,11 @@
         width: 100%;
 
         &__image {
-            aspect-ratio: 16/10;
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+            height: auto;
             position: absolute;
+            width: 100%;
 
             &--left {
                 bottom: 10px;
@@ -167,6 +168,11 @@
         a {
             color: inherit;
             text-decoration: none;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
         }
     }
 </style>

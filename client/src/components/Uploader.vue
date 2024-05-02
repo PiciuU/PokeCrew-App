@@ -2,8 +2,8 @@
     <div class="modal-overlay"></div>
     <div class="modal">
         <div class="card" ref="cardRef">
-            <img class="card__image card__image--main" src="@/assets/images/pikachu.png" alt="Pikachu" />
-            <img class="card__image card__image--mask" src="@/assets/images/pikachu-mask.png" alt="Layer mask for Pikachu hands" />
+            <img class="card__image card__image--main" width="600" height="595" src="@/assets/images/pikachu.png" alt="Pikachu" />
+            <img class="card__image card__image--mask" width="600" height="595" src="@/assets/images/pikachu-mask.png" alt="Layer mask for Pikachu hands" />
             <div class="card__uploader" :class="{
                 'card__uploader--fail': uploader.status == UPLOADER_STATUS.Fail,
                 'card__uploader--success': uploader.status == UPLOADER_STATUS.Success
@@ -136,12 +136,12 @@
         animation: scale .25s ease-in 0s 1;
         display: flex;
         justify-content: center;
-        max-width: 80vh;
+        max-width: min(80vh, 600px);
+        min-width: 300px;
         position: relative;
 
         &__image {
-            max-width: 600px;
-            min-width: 300px;
+            height: auto;
             width: 100%;
 
             &--main {
