@@ -8,9 +8,15 @@
             </div>
 
             <div class="gallery">
-                <img class="gallery__image gallery__image--left" width="346" height="216" src="@/assets/images/gallery/01.jpg" alt="PokeCrew group in the picture" />
-                <img class="gallery__image gallery__image--mid" width="504" height="315" src="@/assets/images/gallery/02.jpg" alt="PokeCrew group in the picture" />
-                <img class="gallery__image gallery__image--right" width="346" height="216" src="@/assets/images/gallery/03.jpg" alt="PokeCrew group in the picture" />
+                <transition name="fade">
+                    <img :key="`left-${currentSetIndex}`" class="gallery__image gallery__image--left" width="350" height="220" loading="lazy" :src="loadImageFromSet(sets[currentSetIndex], 'left')" alt="PokeCrew group in the picture" />
+                </transition>
+                <transition name="fade">
+                    <img :key="`mid-${currentSetIndex}`" class="gallery__image gallery__image--mid" width="500" height="320" loading="lazy" :src="loadImageFromSet(sets[currentSetIndex], 'mid')" alt="PokeCrew group in the picture" />
+                </transition>
+                <transition name="fade">
+                    <img :key="`right-${currentSetIndex}`" class="gallery__image gallery__image--right" width="350" height="220" loading="lazy" :src="loadImageFromSet(sets[currentSetIndex], 'right')" alt="PokeCrew group in the picture" />
+                </transition>
             </div>
 
             <div class="content">
@@ -43,10 +49,15 @@
 </template>
 
 <script setup>
-    import { ref, reactive } from 'vue';
+    import { ref, reactive, onMounted, onUnmounted } from 'vue';
 
     import BackgroundElements from '@/components/BackgroundElements.vue';
     import Uploader from '@/components/Uploader.vue';
+
+    const sets = ['01', '02', '03'];
+    let currentSetIndex = ref(Math.floor(Math.random() * sets.length));
+    let intervalFuncId;
+    const cachedSets = [];
 
     const uploadInputRef = ref(null);
 
@@ -54,6 +65,36 @@
         isUploading: false,
         filesToUpload: null,
     });
+
+    onMounted(() => {
+        intervalFuncId = setInterval(changeImageSet, 15000);
+    })
+
+    onUnmounted(() => {
+        clearInterval(intervalFuncId);
+    })
+
+    const changeImageSet = () => {
+        currentSetIndex.value = (currentSetIndex.value + 1) % sets.length;
+    }
+
+    const loadImageFromSet = (fileset, filename) => {
+        let set = findImageSetById(fileset);
+        if (!set) {
+            set = { id: fileset };
+            cachedSets.push(set);
+        }
+
+        if (!set[filename]) {
+            set[filename] = new URL(`${import.meta.env.BASE_URL}images/sets/${fileset}/${filename}.jpg`, import.meta.url).href;
+        }
+
+        return set[filename];
+    };
+
+    const findImageSetById = (id) => {
+        return cachedSets.find(set => set.id === id);
+    }
 
     const uploadImage = (e) => {
         uploader.isUploading = true;
@@ -175,4 +216,14 @@
             }
         }
     }
+
+    .fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
