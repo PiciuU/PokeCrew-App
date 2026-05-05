@@ -54,7 +54,7 @@
     import BackgroundElements from '@/components/BackgroundElements.vue';
     import Uploader from '@/components/Uploader.vue';
 
-    const sets = ['01', '02', '03'];
+    const sets = ['01', '02', '03', '04'];
     let currentSetIndex = ref(Math.floor(Math.random() * sets.length));
     let intervalFuncId;
     const cachedSets = [];
@@ -217,13 +217,11 @@
         }
     }
 
-    .fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.5s ease;
+    }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
+    .fade-enter-from, .fade-leave-to {
+        opacity: 0;
+    }
 </style>
